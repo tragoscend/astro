@@ -13,6 +13,8 @@ const finished = false;
 const goal = 3;
 
 const hobbyColor = "crimson";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <html lang="zh-cn">
@@ -30,7 +32,8 @@ const hobbyColor = "crimson";
             }
             .hobby {
                 color: var(--hobbyColor);
-                font-weight: bold;
+                font-weight: {fontWeight};
+                text-transform: {textCase};
             }
         </style>
     </head>
