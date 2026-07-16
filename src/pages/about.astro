@@ -2,10 +2,10 @@
 const pageTitle = "关于我";
 
 const identity = {
-  firstName: "缆车",
-  country: "中国",
-  occupation: "爱好",
-  hobbies: ["写作", "健身", "阅读"],
+    firstName: "缆车",
+    country: "中国",
+    occupation: "爱好",
+    hobbies: ["写作", "健身", "阅读"],
 };
 
 const happy = true;
@@ -14,30 +14,35 @@ const goal = 3;
 ---
 
 <html lang="zh-cn">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-	    <a href="/">首页</a>
-		<a href="/blog/">博客</a>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+        <style>
+            h1 {
+                color: purple;
+                font-size: 4rem;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="/">首页</a>
+        <a href="/blog/">博客</a>
         <a href="/about/">关于</a>
 
-		<h1>{pageTitle}</h1>
-		<p>以下是关于我的几个事实：</p>
+        <h1>{pageTitle}</h1>
+        <p>以下是关于我的几个事实：</p>
         <ul>
             <li>名字: {identity.firstName}</li>
             <li>国家: {identity.country}</li>
             <li>职业: {identity.occupation}</li>
-            <li>爱好:
+            <li>
+                爱好:
                 <ul>
-                    {identity.hobbies.map((hobby) => (
-                        <li>{hobby}</li>
-                    ))}
+                    {identity.hobbies.map((hobby) => <li>{hobby}</li>)}
                 </ul>
             </li>
         </ul>
@@ -46,10 +51,16 @@ const goal = 3;
 
         {finished && <p>我完成了这节教程！</p>}
 
-        {goal === 3 ? <p>我的目标是在三天内完成。</p> : <p>我的目标不是 3 天。</p>}
+        {
+            goal === 3 ? (
+                <p>我的目标是在三天内完成。</p>
+            ) : (
+                <p>我的目标不是 3 天。</p>
+            )
+        }
 
-		<p>这里是🚠的学习示例</p>
-		<h2>Cloudflare Pages</h2>
-		<p>这里是关于页面</p>
-	</body>
+        <p>这里是🚠的学习示例</p>
+        <h2>Cloudflare Pages</h2>
+        <p>这里是关于页面</p>
+    </body>
 </html>
