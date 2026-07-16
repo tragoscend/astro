@@ -26,6 +26,10 @@ const goal = 3;
                 color: purple;
                 font-size: 4rem;
             }
+            .hobby {
+                color: green;
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
@@ -42,7 +46,11 @@ const goal = 3;
             <li>
                 爱好:
                 <ul>
-                    {identity.hobbies.map((hobby) => <li>{hobby}</li>)}
+                    {
+                        identity.hobbies.map((hobby) => (
+                            <li class="hobby">{hobby}</li>
+                        ))
+                    }
                 </ul>
             </li>
         </ul>
