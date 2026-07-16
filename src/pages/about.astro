@@ -25,15 +25,15 @@ const textCase = "uppercase";
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
-        <style define:vars={{ hobbyColor }}>
+        <style define:vars={{ hobbyColor, fontWeight, textCase }}>
             h1 {
                 color: purple;
                 font-size: 4rem;
             }
             .hobby {
                 color: var(--hobbyColor);
-                font-weight: {fontWeight};
-                text-transform: {textCase};
+                font-weight: var(--fontWeight);
+                text-transform: var(--textCase);
             }
         </style>
     </head>
