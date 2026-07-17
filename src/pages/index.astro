@@ -22,5 +22,14 @@ const pageTitle = "首页";
         <h2>Cloudflare Pages</h2>
         <p>Test</p>
         <Footer />
+        <script>
+            const menu = document.querySelector(".menu");
+
+            menu?.addEventListener("click", () => {
+                const isExpanded =
+                    menu.getAttribute("aria-expanded") === "true";
+                menu.setAttribute("aria-expanded", `${!isExpanded}`);
+            });
+        </script>
     </body>
 </html>
