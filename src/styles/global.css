@@ -23,7 +23,7 @@ h1 {
 /* 导航样式 */
 .nav-links {
   width: 100%;
-  display: flex;
+  display: none;
   margin: 0;
 }
 
