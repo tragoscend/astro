@@ -38,8 +38,8 @@ h1 {
     color: #0d0950;
 }
 
-.nav-links a: hover,
-.nav-links a: focus {
+.nav-links a:hover,
+.nav-links a:focus {
     background-color: #ff9776;
 }
 
