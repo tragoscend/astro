@@ -1,10 +1,9 @@
 ---
-const platform = "github";
-const username = "withastro";
+import Social from "./Social.astro";
 ---
 
 <footer>
-    <p>
-        在 <a href={`https://${platform}.com/${username}`}>{platform}</a> 上，了解有关我的项目的更多信息
-    </p>
+    <Social platform="github" username="withastro" />
+    <Social platform="twitter" username="astrobuild" />
+    <Social platform="youtube" username="astrobuild" />
 </footer>
